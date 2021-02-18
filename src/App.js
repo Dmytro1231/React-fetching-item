@@ -1,10 +1,9 @@
 import PropTypes from "prop-types";
 import axios from "axios";
 import People from "./components/People";
-import React from 'react'
+import React from "react";
 
-import './App.css';
-
+import "./App.css";
 
 class App extends React.Component {
   state = {
@@ -13,10 +12,8 @@ class App extends React.Component {
 
   getPeople = async () => {
     const {
-      data: { results }
-    } = await axios.get(
-      "https://swapi.dev/api/people/"
-    );
+      data: { results },
+    } = await axios.get("https://swapi.dev/api/people/");
     this.setState({ peoples: results });
   };
 
@@ -24,22 +21,22 @@ class App extends React.Component {
     this.getPeople();
   }
 
-
   render() {
     const { peoples } = this.state;
     return (
       <section className="container">
-    <div className="peoples">
-          {peoples.map((people,index) => (
+        <div className="peoples">
+          {peoples.map((people, index) => (
             <People
-            key={index}
-            name={people.name}
-            birth_year={people.birth_year}
+              key={index}
+              name={people.name}
+              birth_year={people.birth_year}
             />
           ))}
-    </div>
-    </section>
-    )}
+        </div>
+      </section>
+    );
+  }
 }
 
 export default App;
