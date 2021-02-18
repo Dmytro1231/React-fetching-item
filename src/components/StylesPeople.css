@@ -1,0 +1,34 @@
+.peoples {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 800px;
+}
+
+.people {
+    padding: 20px 20px;
+}
+
+.btn {
+    outline: none;
+    cursor: pointer;
+    border: none;
+    background-color: #037ffc;
+    padding: 12px 12px;
+    font-weight: bold;
+    color: #fff;
+    margin-right: 10px;
+}
+.input {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-color: gray;
+    color: black;
+    font-style: italic;
+    outline: none;
+}
+.input[placeholder] {
+    padding: 4px 5px;
+}
